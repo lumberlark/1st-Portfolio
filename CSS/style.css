@@ -48,7 +48,7 @@ html {
 /* General Styles */
 html {
     scroll-behavior: smooth;
-    scroll-snap-type: y mandatory;
+    
 }
 
 body {
@@ -255,9 +255,7 @@ section#Tech {
     }
 }
 
-.icon_Skills {
-    margin-bottom: .25em;
-}
+
 
 .section__subtitle {
     margin: 0;
@@ -290,9 +288,12 @@ header {
     left: 0;
     right: 0;
     z-index: 100;
-    transform: translateX(100%);
+    transform: translateX(100%); /* Initially off-screen */
+    /* Remove display: none; */
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
+
+
 
 .nav__list {
     list-style: none;
@@ -431,8 +432,24 @@ header {
 }
 
 /* Services */
+
+.skills{
+    margin-bottom: 2rem;
+   
+}
+
 #skills span {
-    color: cornflowerblue;
+    color: #324AB2;
+    text-shadow: 0 0 71px #324AB2;
+}
+
+#skills span:nth-child(2){
+    color: forestgreen;
+    text-shadow: 0 0 70px forestgreen;
+}
+
+.icon_Skills {
+    margin-bottom: .25em;
 }
 
 h1 {
@@ -441,17 +458,17 @@ h1 {
     height: auto;
 }
 
-ul {
+.skills ul {
     width: min(100rem, 90%);
     margin-inline: auto;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
     justify-content: center;
-    gap: 1.8rem;
+    gap: 1rem;
     list-style: none;
 }
 
-ul li {
+.skills ul li {
     max-width: 13rem;
     justify-self: center;
     display: grid;
@@ -464,9 +481,11 @@ ul li {
     justify-items: center;
     align-items: flex-start;
     text-align: center;
+    margin: 0;
+    grid-template-rows: auto;
 }
 
-ul li .icon {
+.skills ul li .icon {
     grid-area: icon;
     width: 7rem;
     aspect-ratio: 1;
@@ -481,14 +500,14 @@ ul li .icon {
         inset -0.25rem 0.25rem 0.5rem rgba(0, 0, 0, 0.45);
 }
 
-ul li::before {
+.skills ul li::before {
     content: "";
     grid-area: line;
     height: 2rem;
     border-right: 2px dotted currentColor;
 }
 
-ul li::after {
+.skills ul li::after {
     content: "";
     grid-area: dot;
     width: 1rem;
@@ -499,12 +518,13 @@ ul li::after {
     margin-bottom: 0.5rem;
 }
 
-ul li .title {
+.skills ul li .title {
     grid-area: title;
     margin-block: 0.5rem;
     font-size: 1.3rem;
     font-weight: 600;
     text-align: center;
+    justify-content: center;
     text-transform: uppercase;
 }
 
@@ -516,7 +536,9 @@ ul li .title {
     flex-direction: column; /* Stack elements vertically on small screens */
     align-items: center;
     text-align: center;
-    padding: 5em 1em; /* Adjust padding as needed */
+    padding: 2em 1em; /* Adjust padding as needed */
+    position: relative;
+    bottom: 100px;
 }
 
 .about-me__content {
@@ -591,12 +613,12 @@ ul li .title {
 
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
 }
 
 .portfolio__item {
     background: orangered;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .portfolio__img {
@@ -648,12 +670,18 @@ ul li .title {
     display: flex;
     justify-content: center;
     padding: 0;
-    overflow-y: auto; /* Enable vertical scrolling if content overflows */
+    overflow-y: hidden; /* Enable vertical scrolling if content overflows */
 }
 
 .social-list__items {
     margin: 0 .5em;
+    display: flex;
 }
+
+.footer ul li{
+    list-style: none;
+}
+
 
 .social-list__link {
     padding: .5em;
