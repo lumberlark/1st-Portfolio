@@ -57,10 +57,12 @@ body {
     font-weight: 400;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     color: #222;
+    margin: 0;
+    padding: 0;
 }
 
 section {
-    padding: 5em 2em;
+    padding: 3em 1em;
     scroll-snap-align: start;
 }
 
@@ -81,12 +83,12 @@ strong {
 /* Buttons */
 .btn {
     display: inline-block;
-    padding: .5em 2.5em;
+    padding: .5em 1em;
     background: var(--clr-accent);
     color: var(--clr-dark);
     text-decoration: none;
     cursor: pointer;
-    font-size: .8rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: var(--fw-bold);
@@ -106,15 +108,15 @@ h1, h2, h3 {
 }
 
 h1 {
-    font-size: var(--fs-h1);
+    font-size: 3rem;
 }
 
 h2 {
-    font-size: var(--fs-h2);
+    font-size: 1.5rem;
 }
 
 h3 {
-    font-size: var(--fs-h3);
+    font-size: 1.2rem;
 }
 
 /* Scroll bar styles */
@@ -149,7 +151,7 @@ section#Tech {
     -o-background-size: contain;
     position: relative;
     height: 90vh;
-    max-height: 100vh;
+    max-height: 100%;
     background-color: #fff;
     color: #5a5959;
     font-family: var(--font-family);
@@ -157,17 +159,20 @@ section#Tech {
     padding: 0 1em;
 }
 
+
+
 #Tech h1 {
-    display: flex;
-    align-items: flex-center;
+    display: grid;
+    align-items: center;
     justify-content: center;
-    flex-direction: column;
     font-size: 20px;
     letter-spacing: 1vw;
     position: relative;
-    height: 100%;
+    top: 25%;
+    height: 50%;
     width: 100%;
-    left: 25%;
+    /* left: 25%; */
+    
 }
 
 #Tech div {
@@ -192,7 +197,7 @@ section#Tech {
 .scroll-down {
     position: absolute;
     left: 50%;
-    bottom: 8vh;
+    bottom: 20%;
     display: block;
     text-align: center;
     font-size: 20px;
@@ -322,11 +327,11 @@ header {
     background: transparent;
     border: 0;
     cursor: pointer;
-    position: absolute;
+    position: fixed;
     right: 1em;
     top: 1em;
     z-index: 1000;
-    position: fixed;
+    
 }
 
 .nav-open .nav {
@@ -385,7 +390,12 @@ header {
 .intro {
     position: relative;
 }
-
+@media(max-width:768px){
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 @media (min-width: 600px) {
     .Tech {
         display: grid;
@@ -400,7 +410,7 @@ header {
 
     .intro__img {
         grid-area: img;
-        min-width: 250px;
+        max-width:100%;
         position: relative;
         z-index: 2;
     }
@@ -440,7 +450,7 @@ header {
 
 #skills span {
     color: #324AB2;
-    text-shadow: 0 0 71px #324AB2;
+    text-shadow: 0 0 70px #324AB2;
 }
 
 #skills span:nth-child(2){
@@ -539,13 +549,16 @@ h1 {
     padding: 2em 1em; /* Adjust padding as needed */
     position: relative;
     bottom: 100px;
+    margin-bottom: 3em;
 }
 
 .about-me__content {
     flex: 1; /* Allow the content to expand vertically */
     padding: 2em; /* Add padding to the content for spacing */
-    background-color: #fff; /* Background color for the content */
+    background-color: #f9f9f9; /* Background color for the content */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+    padding: 2em,0;
+    border-radius: 5px;
 }
 
 .section__title--about {
@@ -562,8 +575,9 @@ h1 {
 }
 
 .about-me__text {
-    font-size: 1rem; /* Adjust font size for the text */
+    font-size: 1.3rem; /* Adjust font size for the text */
     margin-bottom: 1.5rem; /* Add spacing between paragraphs */
+    text-align: left;
 }
 
 .btn--contact {
@@ -609,21 +623,41 @@ h1 {
     background-color: var(--clr-dark);
     color: var(--clr-light);
     text-align: center;
+    padding: 3em,0;
 }
 
 .portfolio {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 1em;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 800px;
+ 
 }
 
+
+
 .portfolio__item {
-    background: orangered;
+    background: lightblue;
     overflow-x: hidden;
+    overflow-y: hidden;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    margin: 0,auto;
+    height: 300px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.9);
+    border-radius: 8px;
+    
 }
 
 .portfolio__img {
+    max-width: 100%;
+    max-height: 100%;
     transition: transform 750ms cubic-bezier(.5, 0, .5, 1),
-                opacity 250ms linear;
+                opacity 250ms linear
 }
 
 .portfolio__item:focus {
@@ -642,7 +676,7 @@ h1 {
     background: #111;
     color: var(--clr-accent);
     text-align: center;
-    padding: 2.5em 0;
+    padding: 1.5em 0;
     font-size: var(--fs-h3);
 }
 
@@ -670,7 +704,7 @@ h1 {
     display: flex;
     justify-content: center;
     padding: 0;
-    overflow-y: hidden; /* Enable vertical scrolling if content overflows */
+     
 }
 
 .social-list__items {
