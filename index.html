@@ -9,8 +9,16 @@
     <!-- External CSS libraries -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    
+    <link rel="stylesheet" href="CSS/contact-form.css"> <!-- Add a separate CSS file for contact form styles -->
+</head>
+    <!-- Favicon Icon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <script src="https://kit.fontawesome.com/6b697f3db4.js" crossorigin="anonymous"></script>
 
     <!-- Google Fonts (Update these with your own fonts if needed) -->
@@ -45,6 +53,7 @@
                 <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                 <li class="nav__item"><a href="#about-me" class="nav__link">About me</a></li>
                 <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+                <li class="nav__item"><a href="#sendmessage" class="nav__link">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -112,11 +121,12 @@
             My mission is to turn ideas into reality by crafting digital experiences that leave a lasting impression.
         </p>
           
-            <a href="#contact" class="btn btn--contact">Contact Me</a>
+            <a href="#sendmessage" class="btn btn--contact">Contact Me</a>
         </div>
         <div class="about-me__img">
-            <img src="your-profile-image.jpg" alt="Your Profile Image">
+            <img src="/images/Picture 1.jpg" alt="Your Profile Image">
         </div>
+        
     </section>
 
     <!-- My Work section -->
@@ -141,26 +151,71 @@
         </div>
     </section>   
     
-    <!-- Footer section -->
-    <footer class="footer">
+     <!-- Footer section -->
+     <footer class="footer">
         <div class="social-list">
             <ul class="social-list__items">
                 <li class="social-list__item">
-                    <a href="#" class="social-list__link">LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/steve-d-larkin" class="social-list__link">
+                        <i class="fab fa-linkedin"></i> LinkedIn
+                    </a>
                 </li>
                 <li class="social-list__item">
-                    <a href="#" class="social-list__link">GitHub</a>
+                    <a href="https://github.com/lumberlark" class="social-list__link">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
                 </li>
                 <li class="social-list__item">
-                    <a href="#" class="social-list__link">Twitter</a>
+                    <a href="#" class="social-list__link">
+                        <i class="fab fa-twitter"></i> Twitter
+                    </a>
                 </li>
             </ul>
         </div>
+        <div class="contact-footer">
+            <h2 class="section__title section__title--contact">Contact Me</h2>
+            <p class="section__subtitle section__subtitle--contact">Get in touch with me</p>
+
+            <!-- Contact Form -->
+            <form class="contact-form" action="your-backend-endpoint.php" method="POST">
+                <!-- Name Input -->
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <!-- Email Input -->
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="email" required>
+          
+                    
+                <!-- Message Input -->
+                <div class="form-group">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    <!-- Submit Button -->
+
+                    <div class="container">
+                        <div class="center">
+                          <button class="btn" type="submit" value="submit" id="sendmessage">
+                            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                              <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                              <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                            </svg>
+                            <span>Send Message</span>
+                          </button>
+                        </div>
+                      </div>
+                <!-- <button type="submit" value="submit" id="sendmessage">Send me a Message</button> -->
+                </div>
+
+            </form>
+        </div>
         <p class="footer__text">
-            &copy; 2023 Your Name. All rights reserved.
+            &copy; 2023 Steve Larkin. All rights reserved.
         </p>
     </footer>
-
     <script src="Javascript/index.js"></script>
 </body>
 </html>

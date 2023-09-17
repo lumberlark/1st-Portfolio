@@ -142,7 +142,7 @@ h3 {
     background: #8892b0;
 }
 
-/* Hero section for introduction */
+/* Hero section for introduction (common styles) */
 section#Tech {
     background-image: url(/images/pexels-constanze-marie-6302071.png);
     background-repeat: no-repeat;
@@ -159,8 +159,6 @@ section#Tech {
     padding: 0 1em;
 }
 
-
-
 #Tech h1 {
     display: grid;
     align-items: center;
@@ -171,8 +169,6 @@ section#Tech {
     top: 25%;
     height: 50%;
     width: 100%;
-    /* left: 25%; */
-    
 }
 
 #Tech div {
@@ -190,6 +186,41 @@ section#Tech {
 #Tech div:last-child {
     color: #0cf;
     font-size: 7vw;
+}
+
+/* Media query for mobile devices */
+@media screen and (max-width: 768px) {
+    /* Reset styles to maintain the same appearance on mobile */
+    section#Tech {
+        background-size: contain;
+    }
+
+    #Tech h1 {
+        display: flex;
+        flex-direction: column;
+        left: 50px;
+        top: 0;
+        text-align: center;
+        font-size: 13px;
+        margin-left: 90px;
+        
+    }
+
+    #Tech div {
+    padding: 0;
+    width: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    margin-left: 60px;
+    }
+
+    #Tech div:last-child {
+        font-size: 6vw;
+    }
 }
 
 /* End Hero section for introduction */
@@ -539,8 +570,15 @@ h1 {
 }
 
 /* About me */
+
+
+
 .about-me {
-    max-width: 1200px; /* Adjust the max-width as needed */
+    /* background-image: url(/images/lake.jpg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    max-width: 1400px; /* Adjust the max-width as needed */
     margin: 0 auto;
     display: flex;
     flex-direction: column; /* Stack elements vertically on small screens */
@@ -548,23 +586,29 @@ h1 {
     text-align: center;
     padding: 2em 1em; /* Adjust padding as needed */
     position: relative;
-    bottom: 100px;
-    margin-bottom: 3em;
+    margin-bottom: 75px;
+    background-color: #f7f5f5;
+    border-radius: 25px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    
 }
+
+
 
 .about-me__content {
     flex: 1; /* Allow the content to expand vertically */
     padding: 2em; /* Add padding to the content for spacing */
-    background-color: #f9f9f9; /* Background color for the content */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
-    padding: 2em,0;
+    background-color:white; /* Background color for the content */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1); /* Add a subtle shadow */
     border-radius: 5px;
+    bord
 }
 
 .section__title--about {
     font-size: 2rem; /* Increase font size for the title */
     margin-bottom: 1rem; /* Add spacing below the title */
     color: var(--clr-accent); /* Use your accent color */
+    text-align: center;
 }
 
 .section__subtitle--about {
@@ -572,32 +616,20 @@ h1 {
     margin-bottom: 2rem; /* Add more spacing below the subtitle */
     font-weight: bold; /* Make the subtitle bold */
     color: var(--clr-dark); /* Use a dark color for the subtitle */
+    text-align: center;
 }
 
 .about-me__text {
     font-size: 1.3rem; /* Adjust font size for the text */
     margin-bottom: 1.5rem; /* Add spacing between paragraphs */
-    text-align: left;
+    text-align: center;
 }
 
-.btn--contact {
-    display: inline-block;
-    padding: .5em 2.5em;
-    background: var(--clr-accent); /* Use your accent color for the button */
-    color: var(--clr-dark); /* Text color for the button */
-    text-decoration: none;
-    cursor: pointer;
-    font-size: 1rem; /* Font size for the button */
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-weight: var(--fw-bold);
-    transition: transform 200ms ease-in-out;
-    margin-top: 1rem; /* Add spacing above the button */
+.about-me .about-me__img a{
+    position: relatiave;
+    bottom: 2000px;
 }
 
-.btn--contact:hover {
-    transform: scale(1.1);
-}
 
 /* Media Query for Larger Screens */
 @media (min-width: 768px) {
@@ -611,19 +643,29 @@ h1 {
         text-align: left; /* Align text to the left */
     }
 
-    .about-me__img {
+    .about-me__img img {
+        width: 500px;
+        position: relative;
+        left: 80px;
+        height: 400px;
+        display: flex;
         max-width: 100%; /* Ensure the image doesn't overflow its container */
-        border-radius: 10px; /* Add a rounded border to the image */
+        border-radius: 20px; /* Add a rounded border to the image */
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a stronger shadow to the image */
     }
 }
 
 /* My work */
 .my-work {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+    background-color: #f5f5f5;
+    color: var(--clr-accent);
     text-align: center;
     padding: 3em,0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 75px;
+   
 }
 
 .portfolio {
@@ -633,7 +675,7 @@ h1 {
     justify-items: center;
     align-items: center;
     margin: 0 auto;
-    max-width: 800px;
+    max-width: 900px;
  
 }
 
@@ -648,7 +690,7 @@ h1 {
     display: flex;
     margin: 0,auto;
     height: 300px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.9);
+    box-shadow: 0 8px 12px rgba(0,0,0,0.9);
     border-radius: 8px;
     
 }
@@ -719,4 +761,470 @@ h1 {
 
 .social-list__link {
     padding: .5em;
+}
+
+.section-header {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0;
+    font: 300 60px 'Oswald', sans-serif;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+  }
+  
+  .contact-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    max-width: 840px;
+  }
+  
+  /* Left contact page */
+  .form-horizontal {
+    /*float: left;*/
+    max-width: 400px;
+    font-family: 'Lato';
+    font-weight: 400;
+  }
+  
+  .form-control, 
+  textarea {
+    max-width: 400px;
+    background-color: #000;
+    color: #fff;
+    letter-spacing: 1px;
+  }
+  
+  .container {
+    width: 200px;
+    height: 100px;
+    position: relative;
+    max-height:max-content;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  
+  
+  
+  .btn {
+    width: 180px;
+    height: 60px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #91C9FF;
+    outline: none;
+    transition: 1s ease-in-out;
+    border-radius: 10px;
+  }
+  
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+  }
+  
+  .btn:hover {
+    transition: 1s ease-in-out;
+    background: var(--clr-accent);
+  }
+  
+  .btn:hover svg {
+    stroke-dashoffset: -480;
+  }
+  
+  .btn span {
+    color: black;
+    font-size: 18px;
+    font-weight: 100;
+  }
+  
+ 
+  
+  /* Begin Right Contact Page */
+  .direct-contact-container {
+    max-width: 400px;
+  }
+  
+  /* Location, Phone, Email Section */
+  .contact-list {
+    list-style-type: none;
+    margin-left: -30px;
+    padding-right: 20px;
+  }
+  
+  .list-item {
+    line-height: 4;
+    color: #aaa;
+  }
+  
+  .contact-text {
+    font: 300 18px 'Lato', sans-serif;
+    letter-spacing: 1.9px;
+    color: #bbb;
+  }
+  
+  .place {
+    margin-left: 62px;
+  }
+  
+  .phone {
+    margin-left: 56px;
+  }
+  
+  .gmail {
+    margin-left: 53px;
+  }
+  
+  .contact-text a {
+    color: black;
+    text-decoration: none;
+    transition-duration: 0.2s;
+  }
+  
+  .contact-text a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  
+  /* Social Media Icons */
+  .social-media-list {
+    position: relative;
+    font-size: 22px;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  
+  .social-media-list li a {
+    color: #fff;
+  }
+  
+  .social-media-list li {
+    position: relative; 
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    margin: 10px 3px;
+    line-height: 60px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: rgb(27,27,27);
+    cursor: pointer; 
+    transition: all .2s ease-in-out;
+  }
+  
+  .social-media-list li:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 0 1px #fff;
+    transition: all .2s ease-in-out;
+  }
+  
+  .social-media-list li:hover {
+    background-color: #fff; 
+  }
+  
+  .social-media-list li:hover:after {
+    opacity: 1;  
+    transform: scale(1.12);
+    transition-timing-function: cubic-bezier(0.37,0.74,0.15,1.65);
+  }
+  
+  .social-media-list li:hover a {
+    color: #000;
+  }
+  
+  .copyright {
+    font: 200 14px 'Oswald', sans-serif;
+    color: #555;
+    letter-spacing: 1px;
+    text-align: center;
+  }
+  
+  hr {
+    border-color: rgba(255,255,255,.6);
+  }
+  
+  /* Begin Media Queries*/
+  @media screen and (max-width: 850px) {
+    .contact-wrapper {
+      display: flex;
+      flex-direction: column;
+    }
+    .direct-contact-container, .form-horizontal {
+      margin: 0 auto;
+    }  
+    
+    .direct-contact-container {
+      margin-top: 60px;
+      max-width: 300px;
+    }    
+    .social-media-list li {
+      height: 60px;
+      width: 60px;
+      line-height: 60px;
+    }
+    .social-media-list li:after {
+      width: 60px;
+      height: 60px;
+      line-height: 60px;
+    }
+  }
+  
+  @media screen and (max-width: 569px) {
+  
+    .direct-contact-container, .form-wrapper {
+      float: none;
+      margin: 0 auto;
+    }  
+    .form-control, textarea {
+      
+      margin: 0 auto;
+    }
+   
+    
+    .name, .email, textarea {
+      width: 280px;
+    } 
+    
+    .direct-contact-container {
+      margin-top: 60px;
+      max-width: 280px;
+    }  
+    .social-media-list {
+      left: 0;
+    }
+    .social-media-list li {
+      height: 55px;
+      width: 55px;
+      line-height: 55px;
+      font-size: 2rem;
+    }
+    .social-media-list li:after {
+      width: 55px;
+      height: 55px;
+      line-height: 55px;
+    }
+    
+  }
+  
+  @media screen and (max-width: 410px) {
+    .send-button {
+      width: 99%;
+    }
+  }
+
+
+  /* contact-form.css */
+/* Contact form container styles */
+.contact-footer {
+    margin: 0 auto;
+    width: 90%; /* Adjust the width as needed for smaller screens */
+    max-width: 400px; /* Set a maximum width for the form */
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin-top: 20px;
+    max-height: none;
+    overflow: hidden;
+    text-align: center;
+    border-radius: 15px;
+    
+}
+
+/* Contact form title styles */
+.section__title--contact {
+    font-size: 24px;
+    color: #333;
+}
+
+/* Contact form subtitle styles */
+.section__subtitle--contact {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* Form group styles */
+.form-group {
+    margin-bottom: 15px;
+    color: black;
+}
+
+/* Label styles */
+label {
+    font-size: 16px;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input and textarea styles */
+input[type="text"],
+input[type="email"]{
+    color: black;
+    width: 100%;
+    padding: px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+textarea {
+    width: 100%;
+    padding: px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    color: ghostwhite;
+}
+
+/* Textarea specific styles */
+textarea {
+    resize: vertical;
+}
+
+/* Submit button styles */
+.btn--contact {
+    min-width: 190px;
+  min-height: 50px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 22px;
+  text-transform: uppercase;
+  letter-spacing: 1.3px;
+  font-weight: 700;
+  text-align: center;
+  color: ghostwhite;
+  background: dimgray;
+  background: linear-gradient(90deg, gray(129,230,217,1) 0%, gray(79,209,197,1) 100%);
+  border: none;
+  border-radius: 1000px;
+  box-shadow: 12px 12px 24px gray(79,209,197,.64);
+  transition: all 0.3s ease-in-out 0s;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+  padding: 10px;
+  }
+   
+.btn--contact::before{
+    content: '';
+  border-radius: 1000px;
+  min-width: calc(300px + 12px);
+  min-height: calc(60px + 12px);
+  border: 6px solid gray;
+  box-shadow: 0 0 60px rgba(0,255,203,.64);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: all .3s ease-in-out 0s;
+}
+
+.btn--contact:hover, .btn--contact:focus{
+    color: #313133;
+  transform: translateY(-6px);
+}
+
+.btn--contact::after{
+    content: '';
+  width: 30px; height: 30px;
+  border-radius: 100%;
+  border: 6px solid aqua;
+  position: absolute;
+  z-index: -1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: ring 1.7s infinite;
+}
+
+.btn--contact:hover::after, .btn--contact:focus::after{
+    animation: none;
+    display: none;
+}
+
+@keyframes ring {
+    0% {
+      width: 25px;
+      height: 25px;
+      opacity: 1;
+      z-index: 1;
+    }
+    100% {
+        z-index: 1;
+      width: 210px;
+      height: 210px;
+      opacity: 0;
+    }
+  }
+
+/* Footer text styles */
+.footer__text {
+    font-size: 16px;
+    color:#324AB2;
+    margin-top: 20px;
+}
+
+/* Media Query for Smaller Screens (Mobile) */
+@media (max-width: 768px) {
+    /* Adjust the contact form container width for smaller screens */
+    .contact-footer {
+        width: 95%; /* Adjust as needed */
+        max-width: none; /* Remove max-width for full width on smaller screens */
+    }
+    
+    /* Adjust font sizes for smaller screens */
+    .section__title--contact {
+        font-size: 20px; /* Adjust as needed */
+    }
+    
+    .section__subtitle--contact {
+        font-size: 16px; /* Adjust as needed */
+    }
+    
+    label {
+        font-size: 14px; /* Adjust as needed */
+    }
+    
+    input[type="text"],
+    input[type="email"],
+    textarea {
+        font-size: 14px; /* Adjust as needed */
+    }
+    
+    .btn--contact {
+        font-size: 16px; /* Adjust as needed */
+    }
+    
+    .footer__text {
+        font-size: 12px; /* Adjust as needed */
+    }
+}
+
+.contact-me{
+position: relative;
+bottom:-7px;
 }
