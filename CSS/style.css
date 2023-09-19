@@ -95,6 +95,7 @@ strong {
     transition: transform 200ms ease-in-out;
     position: relative;
     top: 65px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, .8);
 }
 
 .btn:hover {
@@ -193,6 +194,7 @@ section#Tech {
     /* Reset styles to maintain the same appearance on mobile */
     section#Tech {
         background-size: contain;
+        overflow-x: hidden;
     }
 
     #Tech h1 {
@@ -221,6 +223,7 @@ section#Tech {
     #Tech div:last-child {
         font-size: 6vw;
     }
+
 }
 
 /* End Hero section for introduction */
@@ -315,6 +318,16 @@ header {
     display: none;
 }
 
+
+/* Navigation bar */
+/* Media query for screens up to 768px (typical for mobile devices) */
+@media (max-width: 768px) {
+   .nav-toggle{
+   width: auto;
+   position: fixed;
+   }
+   
+}
 .nav {
     position: fixed;
     background: var(--clr-dark);
@@ -325,7 +338,6 @@ header {
     right: 0;
     z-index: 100;
     transform: translateX(100%); /* Initially off-screen */
-    /* Remove display: none; */
     transition: transform 250ms cubic-bezier(.5, 0, .5, 1);
 }
 
@@ -416,6 +428,11 @@ header {
 .hamburger::after {
     bottom: 6px;
 }
+
+
+
+/* End hamburger section */
+
 
 /* Intro section */
 .intro {
@@ -587,9 +604,10 @@ h1 {
     padding: 2em 1em; /* Adjust padding as needed */
     position: relative;
     margin-bottom: 75px;
-    background-color: #f7f5f5;
+    background-color: #e7f6f9;
     border-radius: 25px;
     box-shadow: 0 0 5px rgba(0, 0, 0, .1);
+    font-family: 'Helvetica Neue', sans-serif;
     
 }
 
@@ -601,14 +619,15 @@ h1 {
     background-color:white; /* Background color for the content */
     box-shadow: 0 0 20px rgba(0, 0, 0, 1); /* Add a subtle shadow */
     border-radius: 5px;
-    bord
+    
 }
 
 .section__title--about {
-    font-size: 2rem; /* Increase font size for the title */
+    font-size: 3rem; /* Increase font size for the title */
     margin-bottom: 1rem; /* Add spacing below the title */
     color: var(--clr-accent); /* Use your accent color */
     text-align: center;
+    text-transform: capitalize;
 }
 
 .section__subtitle--about {
@@ -623,6 +642,7 @@ h1 {
     font-size: 1.3rem; /* Adjust font size for the text */
     margin-bottom: 1.5rem; /* Add spacing between paragraphs */
     text-align: center;
+    font-family: 'Roboto', sans-serif;
 }
 
 .about-me .about-me__img a{
@@ -630,6 +650,14 @@ h1 {
     bottom: 2000px;
 }
 
+/* Media Query for smaller screens */
+
+@media(max-width:768px){
+    .about-me__img img{
+        margin-top: 40px;
+        border-radius: 50%;
+    }
+}
 
 /* Media Query for Larger Screens */
 @media (min-width: 768px) {
@@ -637,35 +665,50 @@ h1 {
         flex-direction: row; /* Display content side by side on larger screens */
         text-align: left;
     }
+    
 
     .about-me__content {
         padding: 2em 3em; /* Increase horizontal padding for content */
         text-align: left; /* Align text to the left */
     }
 
+    
     .about-me__img img {
-        width: 500px;
+        width:550px;
         position: relative;
-        left: 80px;
-        height: 400px;
+        left: 10px;
+        height: 600px;
         display: flex;
         max-width: 100%; /* Ensure the image doesn't overflow its container */
         border-radius: 20px; /* Add a rounded border to the image */
-        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add a stronger shadow to the image */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.8); /* Add a stronger shadow to the image */
+        border-radius: 50%;
+        transition: transform 0.4s, box-shadow 0.4s;
+        z-index: 2;
+        margin-top: 20px;
+    }
+    .about-me__img img:hover {
+        transform: scale(1.05);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
     }
 }
 
 /* My work */
 .my-work {
-    background-color: #f5f5f5;
+    background-color: #f4f4f4;
     color: var(--clr-accent);
     text-align: center;
-    padding: 3em,0;
+    padding: 40px;
     box-shadow: 0 0 20px rgba(0,0,0,0.2);
     max-width: 1400px;
     margin: 0 auto;
     margin-bottom: 75px;
    
+}
+
+.section__title--work {
+    font-size: 2rem; /* Increase font size */
+    color: #333; /* Change font color */
 }
 
 .portfolio {
@@ -682,7 +725,7 @@ h1 {
 
 
 .portfolio__item {
-    background: lightblue;
+    background-color: lightblue;
     overflow-x: hidden;
     overflow-y: hidden;
     align-items: center;
@@ -1152,7 +1195,7 @@ textarea {
     content: '';
   width: 30px; height: 30px;
   border-radius: 100%;
-  border: 6px solid aqua;
+  border: 6px solid rgb(255, 138, 29);
   position: absolute;
   z-index: -1;
   top: 50%;
