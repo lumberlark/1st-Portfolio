@@ -538,6 +538,11 @@ header {
   text-shadow: 0 0 70px forestgreen;
 }
 
+#skills span:nth-child(3) {
+  color: rgb(231, 40, 40);
+  text-shadow: 0 0 70px rgb(179, 18, 18);
+}
+
 .icon_Skills {
   margin-bottom: 0.25em;
 }
