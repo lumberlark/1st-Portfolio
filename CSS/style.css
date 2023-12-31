@@ -508,7 +508,7 @@ header {
 @media (max-width: 768px) {
   .download-button button {
     margin-left: 55%; /* Adjust the percentage as needed */
-    margin-bottom: 28em; /* Adjust the margin as needed */
+    margin-bottom: 25.5em; /* Adjust the margin as needed */
     text-align: center;
     position: absolute;
     font-size: 3vw;
@@ -1280,6 +1280,7 @@ textarea {
 
   .footer__text {
     font-size: 12px; /* Adjust as needed */
+    margin-top: auto;
   }
 }
 
