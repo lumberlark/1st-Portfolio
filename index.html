@@ -1,225 +1,309 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <!-- Meta information -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
     <title>DevLark Portfolio</title>
-    
+
     <!-- External CSS libraries -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-    <link rel="stylesheet" href="CSS/contact-form.css"> <!-- Add a separate CSS file for contact form styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="stylesheet" href="CSS/contact-form.css" />
+    <!-- Add a separate CSS file for contact form styles -->
     <!-- Favicon Icon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_io/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_io/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_io/favicon-16x16.png">
-    <link rel="manifest" href="/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/images/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/images/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/images/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
 
     <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <script src="https://kit.fontawesome.com/6b697f3db4.js" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/6b697f3db4.js"
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Google Fonts (Update these with your own fonts if needed) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="CSS/style.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
     <!-- Header section -->
 
     <header>
-        <!-- Logo placeholder (replace with your logo) -->
-        <div class="logo">
-            <img src="#" alt="Your Logo">
-        </div>
+      <!-- Logo placeholder (replace with your logo) -->
+      <div class="logo">
+        <img src="#" alt="Your Logo" />
+      </div>
 
-        <!-- Navigation toggle button -->
-        <button class="nav-toggle" aria-label="Toggle navigation">
-            <span class="hamburger"></span>
-        </button>
+      <!-- Navigation toggle button -->
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span class="hamburger"></span>
+      </button>
 
-        <!-- Navigation menu -->
-        <nav class="nav">
-            <ul class="nav__list">
-
-                <!-- Navigation links -->
-                <li class="nav__item"><a href="#Tech" class="nav__link">Home</a></li>
-                <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-                <li class="nav__item"><a href="#about-me" class="nav__link">About me</a></li>
-                <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
-                <li class="nav__item"><a href="#sendmessage" class="nav__link">Contact</a></li>
-            </ul>
-        </nav>
+      <!-- Navigation menu -->
+      <nav class="nav">
+        <ul class="nav__list">
+          <!-- Navigation links -->
+          <li class="nav__item"><a href="#Tech" class="nav__link">Home</a></li>
+          <li class="nav__item">
+            <a href="#skills" class="nav__link">Skills</a>
+          </li>
+          <li class="nav__item">
+            <a href="#about-me" class="nav__link">About me</a>
+          </li>
+          <li class="nav__item">
+            <a href="#work" class="nav__link">My Work</a>
+          </li>
+          <li class="nav__item">
+            <a href="#sendmessage" class="nav__link">Contact</a>
+          </li>
+        </ul>
+      </nav>
     </header>
 
     <!-- Introduction section -->
     <section class="newIntro" id="Tech">
-        <h1>
-            <!-- Title and subtitle for the introduction -->
-            <div><span>Web Developer</span></div>
-            <div id="title"><span>Steve Larkin</span></div>
-        </h1>
-        <div class="download-button">
-            <button type="button" onclick="window.location.href='/images/SteveLarkinResume.pdf'">Download Resume</button>
-        </div>
+      <h1>
+        <!-- Title and subtitle for the introduction -->
+        <div><span>Web Developer</span></div>
+        <div id="title"><span>Steve Larkin</span></div>
+      </h1>
+      <div class="download-button">
+        <button
+          type="button"
+          onclick="window.location.href='/images/SteveLarkinResume.pdf'"
+        >
+          Download Resume
+        </button>
+      </div>
     </section>
 
     <!-- Scroll-down link -->
     <a class="smoothscroll" href="#skills">
-        <div class="scroll-down"></div>
+      <div class="scroll-down"></div>
     </a>
 
     <!-- Skills section -->
     <section class="skills" id="skills">
-        <h1>Bringing <span>ideas</span> to <span>life</span> with <span><i>code!</i></span></h1>
-            <!-- List of skills with icons and titles -->
-        <ul>
-            <li style="--accent-color:#85b1ff">
-                <div class="icon"><i class="fa-brands fa-react" style="color: black;"></i></div>
-                <div class="title">React</div>
-            </li>
-            <li style="--accent-color:#da6607">
-                <div class="icon"><i class="fa-brands fa-html5"></i></div>
-                <div class="title">HTML 5</div>
-            </li>
-            <li style="--accent-color:#2168e4">
-                <div class="icon"><i class="fa-brands fa-css3"></i></div>
-                <div class="title">CSS 3</div>
-            </li>
-            <li style="--accent-color:#DAE438">
-                <div class="icon"><i class="fa-brands fa-js"></i></div>
-                <div class="title">Javascript</div>
-            </li>
-            <li style="--accent-color:dimgray">
-                <div class="icon"><i class="fa-brands fa-github"></i></div>
-                <div class="title">Github</div>
-            </li>
-        </ul>
+      <h1>
+        Bringing <span>ideas</span> to <span>life</span> with
+        <span><i>code!</i></span>
+      </h1>
+      <!-- List of skills with icons and titles -->
+      <ul>
+        <li style="--accent-color: #85b1ff">
+          <div class="icon">
+            <i class="fa-brands fa-react" style="color: black"></i>
+          </div>
+          <div class="title">React</div>
+        </li>
+        <li style="--accent-color: #da6607">
+          <div class="icon"><i class="fa-brands fa-html5"></i></div>
+          <div class="title">HTML 5</div>
+        </li>
+        <li style="--accent-color: #2168e4">
+          <div class="icon"><i class="fa-brands fa-css3"></i></div>
+          <div class="title">CSS 3</div>
+        </li>
+        <li style="--accent-color: #dae438">
+          <div class="icon"><i class="fa-brands fa-js"></i></div>
+          <div class="title">Javascript</div>
+        </li>
+        <li style="--accent-color: dimgray">
+          <div class="icon"><i class="fa-brands fa-github"></i></div>
+          <div class="title">Github</div>
+        </li>
+      </ul>
     </section>
 
     <!-- About Me section -->
-<section id="about-me" class="about-me">
-    <div class="about-me__content">
-        <h2 class="section__title section__title--about"><i>Get to know me!</i></h2>
-        <p class="section__subtitle section__subtitle--about">Passionate Developer</p>
-        <p class="about-me__text">
-            Hello! I'm a passionate and self-taught <strong>front-end Web Developer</strong> based in the greater Chicago region. 
+    <section id="about-me" class="about-me">
+      <div class="about-me__content">
+        <h2 class="section__title section__title--about">
+          <i>Get to know me!</i>
+        </h2>
+        <p class="section__subtitle section__subtitle--about">
+          Passionate Developer
         </p>
         <p class="about-me__text">
-            For the past six years, I've been working in the medical field while nurturing my deep-seeded passion for technology. It all started six years ago when I took an introductory course in HTML/CSS in college, and since then, it's been my sole focus. <strong>The rest is history.</strong>
+          Hello! I'm a passionate and self-taught
+          <strong>front-end Web Developer</strong> based in the greater Chicago
+          region.
         </p>
         <p class="about-me__text">
-            As a front-end Developer, I quickly found my knack for creating responsive and user-friendly applications with ease. I possess a diverse skill set for front-end applications and am committed to continuous growth and learning.
+          For the past six years, I've been working in the medical field while
+          nurturing my deep-seeded passion for technology. It all started six
+          years ago when I took an introductory course in HTML/CSS in college,
+          and since then, it's been my sole focus.
+          <strong>The rest is history.</strong>
         </p>
         <p class="about-me__text">
-            When I'm not coding or working on other projects, I enjoy spending quality time with my family, camping, and embracing the great outdoors.
+          As a front-end Developer, I quickly found my knack for creating
+          responsive and user-friendly applications with ease. I possess a
+          diverse skill set for front-end applications and am committed to
+          continuous growth and learning.
         </p>
         <p class="about-me__text">
-            My mission is to turn ideas into reality by crafting digital experiences that leave a lasting impression.
+          When I'm not coding or working on other projects, I enjoy spending
+          quality time with my family, camping, and embracing the great
+          outdoors.
         </p>
-          
-            <a href="#sendmessage" class="btn btn--contact">Contact Me</a>
-        </div>
-        <div class="about-me__img">
-            <img src="/images/IMG_E6320.svg" alt="Your Profile Image">
-        </div>
-        
+        <p class="about-me__text">
+          My mission is to turn ideas into reality by crafting digital
+          experiences that leave a lasting impression.
+        </p>
+
+        <a href="#sendmessage" class="btn btn--contact">Contact Me</a>
+      </div>
+      <div class="about-me__img">
+        <img src="/images/IMG_E6320.svg" alt="Your Profile Image" />
+      </div>
     </section>
 
     <!-- My Work section -->
     <section class="my-work" id="work">
-        <h2 class="section__title section__title--work">Projects</h2>
-        <p class="section__subtitle section__subtitle--work">My range of work</p>
+      <h2 class="section__title section__title--work">Projects</h2>
+      <p class="section__subtitle section__subtitle--work">My range of work</p>
 
-        <!-- Portfolio items with images -->
-        <div class="portfolio">
-            <a href="#" class="portfolio__item">
-                <img src="images/Picture 1.jpg" alt="" class="portfolio__img">
+      <!-- Portfolio items with images -->
+      <div class="portfolio">
+        <a href="#" class="portfolio__item">
+          <img src="images/Picture 1.jpg" alt="" class="portfolio__img" />
+        </a>
+        <a href="#" class="portfolio__item">
+          <img src="images/Picture 1.jpg" alt="" class="portfolio__img" />
+        </a>
+        <a href="#" class="portfolio__item">
+          <img src="images/Picture 1.jpg" alt="" class="portfolio__img" />
+        </a>
+        <a href="#" class="portfolio__item">
+          <img src="images/Picture 1.jpg" alt="" class="portfolio__img" />
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer section -->
+    <footer class="footer">
+      <div class="social-list">
+        <ul class="social-list__items">
+          <li class="social-list__item">
+            <a
+              href="https://www.linkedin.com/in/steve-d-larkin"
+              class="social-list__link"
+            >
+              <i class="fab fa-linkedin"></i> LinkedIn
             </a>
-            <a href="#" class="portfolio__item">
-                <img src="images/Picture 1.jpg" alt="" class="portfolio__img">
+          </li>
+          <li class="social-list__item">
+            <a href="https://github.com/lumberlark" class="social-list__link">
+              <i class="fab fa-github"></i> GitHub
             </a>
-            <a href="#" class="portfolio__item">
-                <img src="images/Picture 1.jpg" alt="" class="portfolio__img">
+          </li>
+          <li class="social-list__item">
+            <a href="#" class="social-list__link">
+              <i class="fab fa-twitter"></i> Twitter
             </a>
-            <a href="#" class="portfolio__item">
-                <img src="images/Picture 1.jpg" alt="" class="portfolio__img">
-            </a>
-        </div>
-    </section>   
-    
-     <!-- Footer section -->
-     <footer class="footer">
-        <div class="social-list">
-            <ul class="social-list__items">
-                <li class="social-list__item">
-                    <a href="https://www.linkedin.com/in/steve-d-larkin" class="social-list__link">
-                        <i class="fab fa-linkedin"></i> LinkedIn
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a href="https://github.com/lumberlark" class="social-list__link">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a href="#" class="social-list__link">
-                        <i class="fab fa-twitter"></i> Twitter
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="contact-footer">
-            <h2 class="section__title section__title--contact">Contact Me</h2>
-            <p class="section__subtitle section__subtitle--contact">Get in touch with me</p>
-
-            <!-- Contact Form -->
-            <form class="contact-form" action="email_form.php" method="POST">
-                <!-- Name Input -->
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-
-                <!-- Email Input -->
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="email" id="email" name="email" required>
-          
-                    
-                <!-- Message Input -->
-                <div class="form-group">
-                    <label for="message">Your Message</label>
-                    <textarea id="message" name="message" rows="5"></textarea>
-                    <!-- Submit Button -->
-
-                    <div class="container">
-                        <div class="center">
-                          <button class="btn" type="submit" value="submit" id="sendmessage">
-                            <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
-                              <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
-                              <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
-                            </svg>
-                            <span>Send Message</span>
-                          </button>
-                        </div>
-                      </div>
-                <!-- <button type="submit" value="submit" id="sendmessage">Send me a Message</button> -->
-                </div>
-
-            </form>
-        </div>
-        <p class="footer__text">
-            &copy; 2023 Steve Larkin. All rights reserved.
+          </li>
+        </ul>
+      </div>
+      <div class="contact-footer">
+        <h2 class="section__title section__title--contact">Contact Me</h2>
+        <p class="section__subtitle section__subtitle--contact">
+          Get in touch with me
         </p>
+
+        <!-- Contact Form -->
+        <form class="contact-form" action="email_form.php" method="POST">
+          <!-- Name Input -->
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" required />
+          </div>
+
+          <!-- Email Input -->
+          <div class="form-group">
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" required />
+          </div>
+
+          <!-- Message Input -->
+          <div class="form-group">
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" rows="5"></textarea>
+            <!-- Submit Button -->
+
+            <div class="container">
+              <div class="center">
+                <button
+                  class="btn"
+                  type="submit"
+                  value="submit"
+                  id="sendmessage"
+                >
+                  <svg
+                    width="180px"
+                    height="60px"
+                    viewBox="0 0 180 60"
+                    class="border"
+                  >
+                    <polyline
+                      points="179,1 179,59 1,59 1,1 179,1"
+                      class="bg-line"
+                    />
+                    <polyline
+                      points="179,1 179,59 1,59 1,1 179,1"
+                      class="hl-line"
+                    />
+                  </svg>
+                  <span>Send Message</span>
+                </button>
+              </div>
+            </div>
+            <!-- <button type="submit" value="submit" id="sendmessage">Send me a Message</button> -->
+          </div>
+        </form>
+      </div>
+      <p class="footer__text">&copy; 2023 Steve Larkin. All rights reserved.</p>
     </footer>
     <script src="Javascript/index.js"></script>
-</body>
+  </body>
 </html>
