@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+}
+
 html {
   font-size: 90.5%;
 }
@@ -12,8 +16,8 @@ html {
 /* Define custom properties for design consistency */
 :root {
   /* Font Family */
-  --font-family: "Open Sans", sans-serif;
-  --ff-secondary: "Source Code Pro", monospace;
+  --font-family: 'Open Sans', sans-serif;
+  --ff-secondary: 'Source Code Pro', monospace;
 
   /* Font Weight */
   --fw-reg: 300;
@@ -35,7 +39,7 @@ html {
     0.15em 0.15em 0.25em rgba(0, 0, 0, 0.1);
 }
 
-@media (min-width: 800px) {
+@media (max-width: 768px) {
   :root {
     /* Adjust font sizes for larger screens */
     --fs-h1: 4.5rem;
@@ -54,7 +58,7 @@ body {
   font-size: 1.5em;
   line-height: 1.6;
   font-weight: 400;
-  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   color: #222;
   margin: 0;
   padding: 0;
@@ -68,6 +72,7 @@ section {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 strong {
@@ -82,7 +87,7 @@ strong {
 /* Buttons */
 .btn {
   display: inline-block;
-  padding: 0.5em 1em;
+  padding: 0.5em 1rem;
   background: var(--clr-accent);
   color: var(--clr-dark);
   text-decoration: none;
@@ -172,7 +177,6 @@ section#Tech {
   height: 50%;
   width: 100%;
 }
-
 #Tech div {
   padding: 0;
   width: auto;
@@ -429,7 +433,7 @@ header {
 
 .hamburger::before,
 .hamburger::after {
-  content: "";
+  content: '';
   position: absolute;
   left: 0;
   right: 0;
@@ -449,21 +453,21 @@ header {
 .intro {
   position: relative;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: center;
   }
 }
-@media (min-width: 600px) {
+@media (max-width: 768px) {
   .Tech {
     display: grid;
     width: min-content;
     margin: 0 auto;
     grid-column-gap: 1em;
     grid-template-areas:
-      "img title"
-      "img subtitle";
+      'img title'
+      'img subtitle';
     grid-template-columns: min-content max-content;
   }
 
@@ -472,6 +476,7 @@ header {
     max-width: 100%;
     position: relative;
     z-index: 2;
+    height: auto;
   }
 
   .section__subtitle--intro {
@@ -500,7 +505,7 @@ header {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   .download-button button {
     margin-left: 60%; /* Adjust the percentage as needed */
     margin-bottom: 28em; /* Adjust the margin as needed */
@@ -558,11 +563,11 @@ h1 {
   justify-self: center;
   display: grid;
   grid-template:
-    "icon"
-    "line"
-    "dot"
-    "title"
-    "descr" 1fr;
+    'icon'
+    'line'
+    'dot'
+    'title'
+    'descr' 1fr;
   justify-items: center;
   align-items: flex-start;
   text-align: center;
@@ -586,14 +591,14 @@ h1 {
 }
 
 .skills ul li::before {
-  content: "";
+  content: '';
   grid-area: line;
   height: 2rem;
   border-right: 2px dotted currentColor;
 }
 
 .skills ul li::after {
-  content: "";
+  content: '';
   grid-area: dot;
   width: 1rem;
   aspect-ratio: 1;
@@ -632,7 +637,7 @@ h1 {
   background-color: #e7f6f9;
   border-radius: 25px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
-  font-family: "Helvetica Neue", sans-serif;
+  font-family: 'Helvetica Neue', sans-serif;
 }
 
 .about-me__content {
@@ -663,12 +668,13 @@ h1 {
   font-size: 1.3rem; /* Adjust font size for the text */
   margin-bottom: 1.5rem; /* Add spacing between paragraphs */
   text-align: center;
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
 .about-me .about-me__img a {
   position: relatiave;
   bottom: 2000px;
+  height: auto;
 }
 
 /* Media Query for smaller screens */
@@ -820,7 +826,7 @@ h1 {
   text-align: center;
   margin: 0 auto;
   padding: 40px 0;
-  font: 300 60px "Oswald", sans-serif;
+  font: 300 60px 'Oswald', sans-serif;
   color: #fff;
   text-transform: uppercase;
   letter-spacing: 6px;
@@ -840,7 +846,7 @@ h1 {
 .form-horizontal {
   /*float: left;*/
   max-width: 400px;
-  font-family: "Lato";
+  font-family: 'Lato';
   font-weight: 400;
 }
 
@@ -920,7 +926,7 @@ svg {
 }
 
 .contact-text {
-  font: 300 18px "Lato", sans-serif;
+  font: 300 18px 'Lato', sans-serif;
   letter-spacing: 1.9px;
   color: #bbb;
 }
@@ -977,7 +983,7 @@ svg {
 }
 
 .social-media-list li:after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
@@ -1005,7 +1011,7 @@ svg {
 }
 
 .copyright {
-  font: 200 14px "Oswald", sans-serif;
+  font: 200 14px 'Oswald', sans-serif;
   color: #555;
   letter-spacing: 1px;
   text-align: center;
@@ -1016,7 +1022,7 @@ hr {
 }
 
 /* Begin Media Queries*/
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 786px) {
   .contact-wrapper {
     display: flex;
     flex-direction: column;
@@ -1042,7 +1048,7 @@ hr {
   }
 }
 
-@media screen and (max-width: 569px) {
+@media screen and (max-width: 786px) {
   .direct-contact-container,
   .form-wrapper {
     float: none;
@@ -1079,7 +1085,7 @@ hr {
   }
 }
 
-@media screen and (max-width: 410px) {
+@media screen and (max-width: 786px) {
   .send-button {
     width: 99%;
   }
@@ -1128,8 +1134,8 @@ label {
 }
 
 /* Input and textarea styles */
-input[type="text"],
-input[type="email"] {
+input[type='text'],
+input[type='email'] {
   color: black;
   width: 100%;
   padding: px;
@@ -1155,7 +1161,7 @@ textarea {
 .btn--contact {
   min-width: 190px;
   min-height: 50px;
-  font-family: "Nunito", sans-serif;
+  font-family: 'Nunito', sans-serif;
   font-size: 22px;
   text-transform: uppercase;
   letter-spacing: 1.3px;
@@ -1179,7 +1185,7 @@ textarea {
 }
 
 .btn--contact::before {
-  content: "";
+  content: '';
   border-radius: 1000px;
   min-width: calc(300px + 12px);
   min-height: calc(60px + 12px);
@@ -1200,7 +1206,7 @@ textarea {
 }
 
 .btn--contact::after {
-  content: "";
+  content: '';
   width: 30px;
   height: 30px;
   border-radius: 100%;
@@ -1262,8 +1268,8 @@ textarea {
     font-size: 14px; /* Adjust as needed */
   }
 
-  input[type="text"],
-  input[type="email"],
+  input[type='text'],
+  input[type='email'],
   textarea {
     font-size: 14px; /* Adjust as needed */
   }
