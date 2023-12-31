@@ -195,7 +195,7 @@ section#Tech {
 }
 
 /* Media query for mobile devices */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 600px) {
   /* Reset styles to maintain the same appearance on mobile */
   section#Tech {
     background-size: contain;
@@ -205,7 +205,7 @@ section#Tech {
   #Tech h1 {
     display: flex;
     flex-direction: column;
-    left: 50px;
+    left: 35px;
     top: 0;
     text-align: center;
     font-size: 13px;
@@ -233,7 +233,7 @@ section#Tech {
   margin-left: 64.5%;
   margin-top: 17%;
   text-align: center;
-  position: relative;
+  position: absolute;
   font-size: 1.1vw;
   border: transparent;
   color: #042590;
@@ -507,10 +507,10 @@ header {
 
 @media (max-width: 768px) {
   .download-button button {
-    margin-left: 60%; /* Adjust the percentage as needed */
+    margin-left: 55%; /* Adjust the percentage as needed */
     margin-bottom: 28em; /* Adjust the margin as needed */
     text-align: center;
-    position: relative;
+    position: absolute;
     font-size: 3vw;
     border: transparent;
     color: #042590;
