@@ -1251,7 +1251,7 @@ textarea {
   .scroll-down {
     position: absolute;
     left: 50%;
-    bottom: 0;
+    bottom: 15%;
     display: block;
     text-align: center;
     font-size: 20px;
