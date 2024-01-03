@@ -1301,8 +1301,8 @@ textarea {
 /* Footer text styles */
 .footer__text {
   font-size: 16px;
-  color: #324ab2;
-  margin-top: 20px;
+  color: #1785f3;
+  margin-top: 17px;
 }
 
 @media (max-width: 786px) {
@@ -1363,11 +1363,11 @@ textarea {
 
   .footer__text {
     font-size: 12px; /* Adjust as needed */
-    margin-top: 40px;
+    margin-top: 30px;
   }
 }
 
 .contact-me {
   position: relative;
-  bottom: -7px;
+  bottom: -6px;
 }
