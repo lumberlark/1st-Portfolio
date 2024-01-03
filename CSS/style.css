@@ -530,17 +530,17 @@ header {
 
 #skills span {
   color: #324ab2;
-  text-shadow: 0 0 70px #324ab2;
+  text-shadow: 0 0 100px #324ab2;
 }
 
 #skills span:nth-child(2) {
   color: forestgreen;
-  text-shadow: 0 0 70px forestgreen;
+  text-shadow: 0 0 100px forestgreen;
 }
 
 #skills span:nth-child(3) {
   color: rgb(231, 40, 40);
-  text-shadow: 0 0 70px rgb(179, 18, 18);
+  text-shadow: 0 0 100px rgb(179, 18, 18);
 }
 
 .icon_Skills {
@@ -578,6 +578,8 @@ h1 {
   text-align: center;
   margin: 0;
   grid-template-rows: auto;
+  position: relative;
+  right: 10px;
 }
 
 .skills ul li .icon {
@@ -684,6 +686,25 @@ h1 {
 
 /* Media Query for smaller screens */
 
+@media (max-width: 786px) {
+  .skills ul li {
+    max-width: 13rem;
+    justify-self: center;
+    display: grid;
+    grid-template:
+      'icon'
+      'line'
+      'dot'
+      'title'
+      'descr' 1fr;
+    justify-items: center;
+    align-items: flex-start;
+    text-align: center;
+    margin: 0, auto;
+    grid-template-rows: auto;
+  }
+}
+
 @media (max-width: 768px) {
   .about-me__img img {
     margin-top: 40px;
@@ -754,19 +775,45 @@ h1 {
   background-color: lightblue;
   overflow-x: hidden;
   overflow-y: hidden;
-  align-items: center;
-  justify-content: center;
+  justify-content: stretch;
+  align-items: stretch;
   display: flex;
-  margin: 0, auto;
-  height: 300px;
+  flex-direction: column;
+  height: 97%;
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.9);
   border-radius: 8px;
+  position: relative;
 }
 
 .portfolio__img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: auto;
   transition: transform 750ms cubic-bezier(0.5, 0, 0.5, 1), opacity 250ms linear;
+}
+
+.portfolio__link {
+  display: block;
+}
+
+.portfolio__links {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 10px;
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.live-view,
+.github {
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
 }
 
 .portfolio__item:focus {
@@ -1050,6 +1097,12 @@ hr {
     width: 60px;
     height: 60px;
     line-height: 60px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .portfolio {
+    grid-template-columns: 1fr;
   }
 }
 
