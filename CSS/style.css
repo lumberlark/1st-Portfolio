@@ -679,7 +679,7 @@ h1 {
 }
 
 .about-me .about-me__img a {
-  position: relative;
+  position: relatiave;
   bottom: 2000px;
   height: auto;
 }
