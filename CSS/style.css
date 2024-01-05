@@ -1382,13 +1382,8 @@ textarea {
     margin-top: 30px;
   }
 
-  .container .btn {
+  .center .btn {
     position: relative;
     height: auto;
   }
-}
 
-.contact-me {
-  position: relative;
-  bottom: -6px;
-}
