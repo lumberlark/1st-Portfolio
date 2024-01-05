@@ -106,6 +106,20 @@ strong {
   transform: scale(1.1);
 }
 
+.border {
+  fill: none;
+}
+
+.bg-rect {
+  stroke: #a0a0a0; /* Border color */
+  stroke-width: 3; /* Border width */
+}
+
+.hl-line {
+  stroke: #36fa05; /* Highlighted line color */
+  stroke-width: 4; /* Highlighted line width */
+}
+
 /* Typography */
 h1,
 h2,
@@ -1309,7 +1323,7 @@ textarea {
   .scroll-down {
     position: absolute;
     left: 50%;
-    bottom: 15%;
+    bottom: 25%;
     display: block;
     text-align: center;
     font-size: 20px;
@@ -1357,6 +1371,11 @@ textarea {
     font-size: 14px; /* Adjust as needed */
   }
 
+  .social-list__items {
+    position: relative;
+    right: 20px;
+  }
+
   .btn--contact {
     font-size: 16px; /* Adjust as needed */
   }
@@ -1365,9 +1384,13 @@ textarea {
     font-size: 12px; /* Adjust as needed */
     margin-top: 30px;
   }
-}
 
-.contact-me {
-  position: relative;
-  bottom: -6px;
+  .contact-me {
+    position: relative;
+    bottom: -6px;
+  }
+
+  .btn span {
+    height: auto;
+  }
 }
