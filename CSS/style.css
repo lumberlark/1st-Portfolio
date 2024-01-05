@@ -166,6 +166,7 @@ section#Tech {
   -webkit-background-size: contain;
   -webkit-background-size: contain;
   -o-background-size: contain;
+  background-size: contain;
   position: relative;
   height: 90vh;
   max-height: 100%;
@@ -1153,14 +1154,7 @@ hr {
   }
 }
 
-@media screen and (max-width: 786px) {
-  .send-button {
-    width: 99%;
-  }
-}
-
-/* contact-form.css */
-/* Contact form container styles */
+/* contact-form */
 .contact-footer {
   margin: 0 auto;
   width: 90%; /* Adjust the width as needed for smaller screens */
@@ -1246,7 +1240,7 @@ textarea {
   border: none;
   border-radius: 1000px;
   box-shadow: 12px 12px 24px gray(79, 209, 197, 0.64);
-  transition: all 0.3s ease-in-out 0s;
+  transition: all 0.3s ease-in-out;
   cursor: pointer;
   outline: none;
   position: relative;
@@ -1386,4 +1380,4 @@ textarea {
     position: relative;
     height: auto;
   }
-
+}
