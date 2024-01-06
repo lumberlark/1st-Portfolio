@@ -897,7 +897,7 @@ h1 {
 
 .social-list__items {
   display: flex;
-  margin-right: 25px;
+  margin-right: 43px;
 }
 
 .footer ul li {
@@ -1319,8 +1319,11 @@ textarea {
 }
 
 @media only screen and (max-width: 768px) {
-  .btn--contact:focus {
+  .btn--contact:focus::after {
+    -webkit-display: none;
     display: none;
+    -webkit-animation: none;
+    animation: none;
   }
 }
 
