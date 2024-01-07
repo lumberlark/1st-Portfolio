@@ -52,18 +52,18 @@
       <nav class="nav">
         <ul class="nav__list">
           <!-- Navigation links -->
-          <li class="nav__item"><a href="#Tech" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="#Tech" class="nav__link" aria-label="Home">Home</a></li>
           <li class="nav__item">
-            <a href="#skills" class="nav__link">Skills</a>
+            <a href="#skills" class="nav__link" aria-label="Skills">Skills</a>
           </li>
           <li class="nav__item">
-            <a href="#about-me" class="nav__link">About me</a>
+            <a href="#about-me" class="nav__link" aria-label="About me">About me</a>
           </li>
           <li class="nav__item">
-            <a href="#work" class="nav__link">My Work</a>
+            <a href="#work" class="nav__link" aria-label="My Work">My Work</a>
           </li>
           <li class="nav__item">
-            <a href="#sendmessage2" class="nav__link">Contact</a>
+            <a href="#sendmessage2" class="nav__link" aria-label="Contact">Contact</a>
           </li>
         </ul>
       </nav>
@@ -87,7 +87,7 @@
     </section>
 
     <!-- Scroll-down link -->
-    <a class="smoothscroll" href="#skills" alt="scroll down arrow">
+    <a class="smoothscroll" href="#skills" alt="scroll down arrow" aria-label="Scroll Down">
       <div class="scroll-down"></div>
     </a>
 
@@ -119,13 +119,13 @@
         </li>
         <li style="--accent-color: dimgray">
           <div class="icon"><i class="fa-brands fa-github"></i></div>
-          <div class="title">Github/Git</div>
+          <div class="title">Github</div>
         </li>
       </ul>
     </section>
 
     <!-- About Me section -->
-    <section id="about-me parallax" class="about-me">
+    <section id="about-me" class="about-me">
       <div class="about-me__content">
         <h2 class="section__title section__title--about">
           Get to know me!
@@ -293,12 +293,15 @@
               <a
                 href="https://www.linkedin.com/in/steve-d-larkin"
                 class="social-list__link"
+                aria-label="LinkedIn Profile"
               >
                 <i class="fab fa-linkedin"></i> LinkedIn
               </a>
             </li>
             <li class="social-list__item">
-              <a href="https://github.com/lumberlark" class="social-list__link">
+              <a href="https://github.com/lumberlark" 
+              class="social-list__link"
+              aria-label="GitHub Profile">
                 <i class="fab fa-github"></i> GitHub
               </a>
             </li>
