@@ -670,10 +670,18 @@ h1 {
   padding: 2em 1em; /* Adjust padding as needed */
   position: relative;
   margin-bottom: 75px;
-  background-color: #e7f6f9;
+  background-image: url(/images/lukas-blazek-EWDvHNNfUmQ-unsplash.avif);
   border-radius: 25px;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
   font-family: 'Helvetica Neue', sans-serif;
+}
+
+.parallax {
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 50px; /* Adjust the height as needed */
 }
 
 .about-me__content {
