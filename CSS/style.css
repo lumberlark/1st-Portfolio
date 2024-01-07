@@ -676,6 +676,13 @@ h1 {
   font-family: 'Helvetica Neue', sans-serif;
 }
 
+@media (max-width: 786px) {
+  .about-me {
+    background-image: none;
+    background-color: rgb(242, 242, 242);
+  }
+}
+
 .parallax {
   background-attachment: fixed;
   background-position: center;
