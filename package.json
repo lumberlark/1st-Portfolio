@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/lumberlark/1st-Portfolio/issues"
   },
-  "homepage": "https://github.com/lumberlark/1st-Portfolio#readme"
+  "homepage": "https://github.com/lumberlark/1st-Portfolio#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
